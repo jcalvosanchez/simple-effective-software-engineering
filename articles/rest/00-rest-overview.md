@@ -11,7 +11,7 @@
 
 This repository aims to share knowledge about **REST** (REpresentational State Transfer), with some articles and real world business examples as code katas.
 
-## Articles on Functional Programming in Java
+## Articles on REST
 
 1. [Introduction to REST](01-introduction-to-rest.md)
 2. [What REST requires](02-what-rest-requires.md)
