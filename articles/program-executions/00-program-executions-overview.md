@@ -11,8 +11,11 @@
 ![Static Badge](https://img.shields.io/badge/processes-purple)
 ![Static Badge](https://img.shields.io/badge/threads-purple)
 
-This repository aims to share knowledge about **REST** (REpresentational State Transfer), with some articles and real world business examples as code katas.
+## Articles on Program Executions
 
-## Articles on REST
+This serie aims to share knowledge about Program Executions
 
 1. [Understanding Program Executions Fundamentals](understanding-executions-program-process-thread.md): Computer, Operating System, Program, Process, Thread
+2. [Program Executions Models](program-execution-models.md): Sequential, Concurrency, Parallelism, Distributed Computing
+3. [Non-Sequential Programming Challenges](non-sequential-programming-challenges.md): Sequential, Concurrency, Parallelism, Distributed Computing
+4. [Commons Solutions to Non-Sequential Programming Challenges]
