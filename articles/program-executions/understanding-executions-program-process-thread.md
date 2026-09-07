@@ -59,17 +59,17 @@ A **virtual machine** (VM) is a software-defined computer (with one or more core
 A virtualization layer, typically called a **hypervisor**, provides virtual hardware to the VM. Virtualization allows multiple virtual computers to run on the same physical hardware while maintaining **a degree of isolation** between them.
 
 ```
-┌─────────────────────────────────┐
-│ ┌─────────────────────────────┐ │
-│ │ ┌──────────┐  ┌──────────┐  │ │
-│ │ │ VM 1     │  │ VM 2     │  │ │
-│ │ │ Virtual  │  │ Virtual  │  │ │
-│ │ │ hardware │  │ hardware │  │ │
-│ │ └──────────┘  └──────────┘  │ │
-│ │ Hypervisor                  │ │
-│ └─────────────────────────────┘ │
-│ Operating System                │
-└─────────────────────────────────┘
+┌────────────────────────────────┐
+│ ┌────────────────────────────┐ │
+│ │ ┌──────────┐  ┌──────────┐ │ │
+│ │ │ VM 1     │  │ VM 2     │ │ │
+│ │ │ Virtual  │  │ Virtual  │ │ │
+│ │ │ hardware │  │ hardware │ │ │
+│ │ └──────────┘  └──────────┘ │ │
+│ │ Hypervisor                 │ │
+│ └────────────────────────────┘ │
+│ Operating System               │
+└────────────────────────────────┘
 Physical Machine
 ```
 
@@ -137,9 +137,9 @@ A process moves through different states during its lifetime.
        waits            finishes
           │                │
           ▼                ▼
-     ┌─────────┐      ┌───────────┐
-     │ Waiting │      │ Terminated│
-     └────┬────┘      └───────────┘
+     ┌─────────┐      ┌────────────┐
+     │ Waiting │      │ Terminated │
+     └────┬────┘      └────────────┘
           │
        becomes ready
           │
@@ -185,21 +185,21 @@ Consider this scenario:
 
 In a single-core CPU
 
-| CPU Cycles      | 1                  | 2                  | 3                  | 4                  | 5                  | 6                  | 7                  | 8               | 9          |
-|-----------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|-----------------|------------|
-| **Main Thread** | **Running** (init) | Waiting            | Waiting            | Waiting            | Waiting            | Waiting            | Waiting            | Running (save)  | Terminated |
-| **Worker T1**   | —                  | **Running** (read) | Terminated         | —                  | —                  | —                  | —                  | —               | —          |
-| **Worker T2**   | —                  | —                  | **Running** (read) | **Running** (read) | Terminated         | —                  | —                  | —               | —          |
-| **Worker T3**   | —                  | —                  | —                  | —                  | **Running** (read) | **Running** (read) | **Running** (read) | Terminated      | —          |
+| CPU Cycles      | 1                  | 2                  | 3                  | 4                  | 5                  | 6                  | 7                  | 8                  | 9          |
+|-----------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|------------|
+| **Main Thread** | **Running** (init) | Waiting            | Waiting            | Waiting            | Waiting            | Waiting            | Waiting            | **Running** (save) | Terminated |
+| **Worker T1**   | —                  | **Running** (read) | Terminated         | —                  | —                  | —                  | —                  | —                  | —          |
+| **Worker T2**   | —                  | —                  | **Running** (read) | **Running** (read) | Terminated         | —                  | —                  | —                  | —          |
+| **Worker T3**   | —                  | —                  | —                  | —                  | **Running** (read) | **Running** (read) | **Running** (read) | Terminated         | —          |
 
 In a double-core CPU
 
-| CPU Cycles      | 1                  | 2                   | 3                  | 4                  | 5                  | 6              | 7          | 
-|-----------------|--------------------|---------------------|--------------------|--------------------|--------------------|----------------|------------|
-| **Main Thread** | **Running** (init) | Waiting             | Waiting            | Waiting            | Waiting            | Running (save) | Terminated |
-| **Worker T1**   | —                  | **Running** (read)  | Terminated         | —                  | —                  | —              | —          |
-| **Worker T2**   | —                  | **Running** (read)  | **Running** (read) | Terminated         | —                  | —              | —          |
-| **Worker T3**   | —                  | —                   | **Running** (read) | **Running** (read) | **Running** (read) | Terminated     | —          |
+| CPU Cycles      | 1                  | 2                   | 3                  | 4                  | 5                  | 6                  | 7          | 
+|-----------------|--------------------|---------------------|--------------------|--------------------|--------------------|--------------------|------------|
+| **Main Thread** | **Running** (init) | Waiting             | Waiting            | Waiting            | Waiting            | **Running** (save) | Terminated |
+| **Worker T1**   | —                  | **Running** (read)  | Terminated         | —                  | —                  | —                  | —          |
+| **Worker T2**   | —                  | **Running** (read)  | **Running** (read) | Terminated         | —                  | —                  | —          |
+| **Worker T3**   | —                  | —                   | **Running** (read) | **Running** (read) | **Running** (read) | Terminated         | —          |
 
 ## Execution Stack: Putting It All Together
 
