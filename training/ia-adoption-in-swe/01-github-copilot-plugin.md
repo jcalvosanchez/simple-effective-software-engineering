@@ -1,21 +1,32 @@
-# Sesión 1: GitHub Copilot Plugin en IntelliJ
+# Sesión 1: GitHub Copilot - Tu primer asistente de IA integrado en tu IntelliJ
 
 ## Duración
 1 hora
 
 ## Audiencia
 - Desarrolladores software sin experiencia previa con IA generativa
-- Preferible: ya tienen IntelliJ IDEA instalado
+
+## Prerrequisitos
+- [ ] Puedo utilizar mi IntelliJ IDEA para mi trabajo normal como desarrollador de software.
+  - [ ] IntelliJ IDEA instalado.
+  - [ ] IntelliJ IDEA actualizado a la última versión: ver `Help / Check for Updates`.
+- [ ] Cuenta de GitHub con suscripción a Copilot activa (ver `github.com/settings/copilot`)
+- [ ] Acceso de red a `github.com` desde el IDE (proxy configurado)
 
 ## Objetivos
-- [ ] Configurar el plugin de GitHub Copilot en IDE
-- [ ] Dominar los flujos básicos de interacción
+Al finalizar la sesión, el alumno será capaz de:
+- [ ] Instalar y abrir el plugin de GitHub Copilot en IntelliJ IDEA.
+- [ ] Verificar que la sesión de GitHub Copilot está activa.
+- [ ] Reconocer los elementos principales del panel de Copilot: barra superior, zona de sesiones, zona de prompt.
+- [ ] Enviar mi primer prompt en modo Ask con esfuerzo Low en el entorno de ejecución de Copilot y modelo de elección del alumno.
+  - [ ] Identificar prompt en modo Ask que requieran un modelo ligero con esfuerzo Low
+  - [ ] Identificar prompt en modo Ask que requieran un modelo pesado con esfuerzo High
 
 ---
 
 ## 1. Instalación y configuración plugin GitHub Copilot en IntelliJ IDEA
 1. Instalar plugin **GitHub Copilot** desde **Settings/Preferences > Plugins > Marketplace**.
-2. Reiniciar el IDE
+2. Reiniciar el IDE.
 3. Autorizar la cuenta de GitHub.
 
 ## 2. Overview del plugin GitHub Copilot
@@ -40,7 +51,7 @@
 - **Clip (añadir contexto)**: adjunta imágenes o ficheros como contexto.
 - **Chip de fichero** (ej. `01-fundamentos-github-copilot.md`): contexto explícito añadido; el `+` permite añadir más ficheros/símbolos (`#file`).
 - **Campo "Ask Copilot"**: donde escribes el prompt.
-- **Selector de modo (`Agent/Ask/Plan`)**: cambia entre **Ask** (solo preguntar, sin modificar código), **Edit** (edición dirigida) y **Agent** (ejecuta tareas multi-paso modificando el proyecto).
+- **Selector de modo (`Agent/Ask/Plan`)**: cambia entre **Agent** (ejecuta tareas multi-paso modificando el proyecto), **Ask** (solo preguntar, sin modificar código) y **Plan** (diseñar antes de construir: descompone problemas complejos, sugiere arquitecturas y crea planes de implementación detallados).
 - **Selector de modelo** (ej. `Kimi K3`): elige el LLM a usar según la tarea (velocidad vs. razonamiento).
 - **Selector de esfuerzo** (ej. `Low`): nivel de razonamiento del modelo (Low/Medium/High); más esfuerzo = mejor razonamiento pero más coste y latencia.
 - **Botón enviar (`↑`)**: envía el prompt.
@@ -51,10 +62,14 @@
 - **Agent / Edits**: aplicar cambios directamente en el proyecto.
 - **Plan**: descomponer tareas grandes en pasos antes de ejecutar.
 
-## 3. Buenas prácticas de uso
-- No compartir datos sensibles.
-- Elegir el modelo y nivel de esfuerzo adecuado según la tarea.
-- Revisar siempre el código generado.
-- Prompts claros y específicos.
-- Mantener contexto coherente.
-- Refactorizar y testear lo generado.
+## 3. Antes de tu primer prompt: 3 reglas de seguridad
+1. **No compartas datos sensibles**: secretos, credenciales, datos personales o código sujeto a propiedad intelectual. Regla de oro: si no lo publicarías en un foro público, no lo pongas en un prompt.
+2. **Los créditos son limitados**: cada interacción consume créditos de IA (revísalos en *AI Credit usage*). Cada modelo y esfuerzo tiene un coste diferente. Experimenta con los diferentes modelos y esfuerzos para calibrar qué funciona mejor para cada tarea.
+3. **La IA se equivoca**: nunca uses su salida sin revisarla. En la Sesión 2 aprenderás a sacarle partido con criterio.
+
+## 4. Tu turno: juega seguro
+Ya tienes el plugin instalado, conoces el panel y sabes las 3 reglas. Antes de la próxima sesión:
+- [ ] Envía tu primer prompt en modo **Ask** (ej. "explica qué hace este método" sobre código de tu proyecto).
+- [ ] Prueba a adjuntar un fichero como contexto con el clip o `#file`.
+- [ ] Revisa tu consumo en **AI Credit usage** tras la sesión de juego.
+- [ ] Anota 1 cosa que te haya sorprendido y 1 duda para la Sesión 2.
