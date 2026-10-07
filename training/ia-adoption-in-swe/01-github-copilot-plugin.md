@@ -51,7 +51,7 @@ Al finalizar la sesión, el alumno será capaz de:
 - **Clip (añadir contexto)**: adjunta imágenes o ficheros como contexto.
 - **Chip de fichero** (ej. `01-fundamentos-github-copilot.md`): contexto explícito añadido; el `+` permite añadir más ficheros/símbolos (`#file`).
 - **Campo "Ask Copilot"**: donde escribes el prompt.
-- **Selector de modo (`Agent/Ask/Plan`)**: cambia entre **Agent** (ejecuta tareas multi-paso modificando el proyecto), **Ask** (solo preguntar, sin modificar código) y **Plan** (diseñar antes de construir: descompone problemas complejos, sugiere arquitecturas y crea planes de implementación detallados).
+- **Selector de modo (`Agent/Ask/Plan`)**: cambia entre **Agent** (ejecuta tareas modificando el proyecto), **Ask** (solo preguntar, sin modificar código) y **Plan** (diseñar antes de construir: descompone problemas complejos, sugiere arquitecturas y crea planes de implementación detallados).
 - **Selector de modelo** (ej. `Kimi K3`): elige el LLM a usar según la tarea (velocidad vs. razonamiento).
 - **Selector de esfuerzo** (ej. `Low`): nivel de razonamiento del modelo (Low/Medium/High); más esfuerzo = mejor razonamiento pero más coste y latencia.
 - **Botón enviar (`↑`)**: envía el prompt.
