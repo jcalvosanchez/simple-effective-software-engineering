@@ -1,5 +1,7 @@
 # Sesión 1: GitHub Copilot - Tu primer asistente de IA integrado en tu IntelliJ
 
+Instalaremos el plugin de GitHub Copilot en IntelliJ IDEA, veremos los elementos principales del panel y lo usaremos para enviar nuestro primer prompt en modo Ask siguiendo 3 reglas básicas de seguridad.
+
 ## Duración
 1 hora
 
